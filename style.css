@@ -1,5 +1,4 @@
 * {
-    box-shadow: greenyellow 0 0 0 1px;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -9,23 +8,32 @@ body {
     font-family: 'Space Mono', sans-serif;
     background-color: #262629;
     color: #FDEDDA;
+    background-image: url("assets/images/grain.png");
+    background-repeat: no-repeat;
 }
 
+p, h2 {
+    letter-spacing: 0.05rem;
+}
 
 header {
     display: flex;
     justify-content: space-between;
-    margin: 1.5rem;
+    margin: 1.8vw;
 }
     .header__content {
         display: flex;
         align-items: center;
     }
         .burger-menu {
-            margin: 0 2.5rem 0 1rem;
+            margin: 0 3vw 0 1.2vw;
         }
+            .burger-menu a {
+                display: flex;
+            }
+
             .burger-menu img {
-                width: 100%;
+                width: 3.5vw;
             }
 
         .header__text__translated-bar__container {
@@ -35,6 +43,7 @@ header {
             .header__text__translated-bar  {
                 display: flex;
                 animation: translate 10s linear infinite;
+                font-size: 1.2vw;
             }
             
             @keyframes translate {
@@ -45,7 +54,9 @@ header {
         
         .header__text p {
             position: absolute;
-            top: 3.8rem;
+            top: 4.3vw;
+            font-size: 1.3vw;
+            opacity: 15%;
         }
 
     .header__language {
@@ -54,32 +65,107 @@ header {
     }
         .header__language__text {
             color: #FDEDDA;
+            font-size: 1.2vw;
         }
+
 
 main {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - (3rem)*2 - (50px)*2);
+    align-items: center;
 }
     .main__text {
-        display: flex;
-        flex-direction: column;
     }
-        .main__text h1 {
-            font-family: 'Climate Crisis 1979', sans-serif;
-            font-size: 5rem;
-            font-weight: normal;
+        .main__text h2 {
+            font-size: 1vw;
         }
+
+        .main__text h2:first-child {
+            margin-left: 2.5vw;
+        }
+
+        .main__text h2:last-child {
+            float: right;
+        }
+
+        .main__text__name {
+            font-family: 'Climate Crisis 1979', sans-serif;
+            font-size: 2.4vw;
+        }
+            .main__text__name h1 {
+                font-weight: normal;
+                line-height: 3.8vw;
+            }
+
+            .main__text__name h1:last-child {
+                margin-top: 0.2rem;
+            }
+
         .main__text__content {
             display: flex;
+            margin-left: 2.5vw;
+        }
+            .main__text__content a {
+                display: flex;
+                height: 3.8vw;
+                margin-left: 1vw;
+            }
+
+            .main__text__content img {
+                width: 100%;
+                height: auto;
+            }
+
+    .main__text__background {
+        opacity: 15%;
+        font-size: 1.3vw;
+        line-height: 1.3vw;
+        z-index: -1;
+    }
+        td {
+            width: 25%;
+        }
+        .main__text__background td:nth-child(2) {
+            width: 35%;
+        }
+
+        #main__text__background__content1 {
+            position: absolute;
+            left: 15vw;
+        }
+
+        #main__text__background__content2 {
+            position: absolute;
+            top: 30vh;
+            right: 15vw;
         }
 
 
-.main__text__background {
-    display: none;
-}
 aside {
-    display: none;
+    position: absolute;
+    right: 1.8vw;
 }
+    .nav-arrow a {
+        display: flex;
+    }
+        .nav-arrow img {
+            width: 5vw;
+        }
 
 
 footer {
-    display: none;
+    display: flex;
+    position: fixed;
+    bottom: 1.8vw;
+    right: 1.8vw;
 }
+    .footer__text {
+        width: 11vw;
+    }
+        .footer__text__item {
+            justify-content: space-between;
+            display: flex;
+            font-size: 0.8vw;
+            font-weight: bold;
+        }
