@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     menuIsHover()
 
     document.addEventListener("mousemove", (e) => {
-        let mouse_x = e.clientX
-        let mouse_y = e.clientY
+        let mouse_x = e.clientX + scrollX
+        let mouse_y = e.clientY + scrollY
         if (homeSection.style.display !== 'none') {
             for (let element of cont) {
                 let elem_x = elPos(element).clientX

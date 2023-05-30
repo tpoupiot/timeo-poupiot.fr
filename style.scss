@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
     --color-font : #fff;
     --color-static : #fff;
@@ -20,7 +22,7 @@ $font-size_normal: 0.8vw;
 }
 body {
     font-family: "Space Mono", monospace;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 a {
     color: var(--color-font);
@@ -65,7 +67,6 @@ a {
     height: 100vh;
     width: 100vw;
     cursor: none;
-    overflow: hidden;
     display: flex;
     color: var(--color-font);
 }
@@ -328,9 +329,9 @@ header {
                 text-transform: uppercase;
                 color: white;
             }
-            :hover {
+            &:hover {
                 transition: all 200ms ease;
-                padding: 0.8em 3.2em;
+                padding: 0.8em 4em;
             }
         }
 
@@ -385,10 +386,14 @@ header {
     }
 }
 
-.homeSecond {
-    width: 100vw;
-    height: 100vh;
+.about-section {
+    @include section-style;
+    background-color: $black;
+    color: var(--color-font);
 }
+
+
+
 
 .competence-section {
     @include section-style;
@@ -410,3 +415,4 @@ header {
     color: var(--color-font);
     display: none;
 }
+

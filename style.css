@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --color-font: #fff;
   --color-static: #fff;
@@ -13,7 +14,7 @@
 
 body {
   font-family: "Space Mono", monospace;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 a {
@@ -112,7 +113,6 @@ header .right-content_header a {
   height: 100vh;
   width: 100vw;
   cursor: none;
-  overflow: hidden;
   display: flex;
   color: var(--color-font);
   background-color: #1E1E1E;
@@ -405,9 +405,9 @@ header .right-content_header a {
   text-transform: uppercase;
   color: white;
 }
-.home-section footer .mycv :hover {
+.home-section footer .mycv:hover {
   transition: all 200ms ease;
-  padding: 0.8em 3.2em;
+  padding: 0.8em 4em;
 }
 .home-section footer .right-content_footer {
   display: flex;
@@ -452,16 +452,20 @@ header .right-content_header a {
   }
 }
 
-.homeSecond {
-  width: 100vw;
+.about-section {
   height: 100vh;
+  width: 100vw;
+  cursor: none;
+  display: flex;
+  color: var(--color-font);
+  background-color: #1E1E1E;
+  color: var(--color-font);
 }
 
 .competence-section {
   height: 100vh;
   width: 100vw;
   cursor: none;
-  overflow: hidden;
   display: flex;
   color: var(--color-font);
   background-color: #fa7970;
@@ -473,7 +477,6 @@ header .right-content_header a {
   height: 100vh;
   width: 100vw;
   cursor: none;
-  overflow: hidden;
   display: flex;
   color: var(--color-font);
   background-color: #fa7970;
@@ -485,7 +488,6 @@ header .right-content_header a {
   height: 100vh;
   width: 100vw;
   cursor: none;
-  overflow: hidden;
   display: flex;
   color: var(--color-font);
   background-color: #fa7970;
