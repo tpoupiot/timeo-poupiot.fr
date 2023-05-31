@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@font-face {
+  font-family: "Coolvetica";
+  src: url("assets/fonts/Coolvetica.ttf.woff") format("woff"), url("assets/fonts/Coolvetica.ttf.eot"), url("assets/fonts/Coolvetica.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --color-font: #fff;
+  --color-font-small: #C0C0C0;
+  --color-background: #1E1E1E;
+  --color-extra: #fa7970;
+  --timeAnimation: 0.5s;
+  --font-size_normal: 0.8vw;
+}
+
+.cursor {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  translate: -50%, -50%;
+}
+.cursor .circle {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 26px;
+  height: 26px;
+  background: none;
+  border: 2px solid var(--color-font);
+  transition: all 150ms ease-out;
+}
+.cursor .pointer {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 7px;
+  height: 7px;
+  background: var(--color-font);
+}
+
+/*# sourceMappingURL=cursor.css.map */

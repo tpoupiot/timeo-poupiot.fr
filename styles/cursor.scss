@@ -1,0 +1,24 @@
+@import 'root';
+
+.cursor {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    translate: (-50%, -50%);
+
+    .circle {
+        @include cursor-style;
+        width: 26px;
+        height: 26px;
+        background: none;
+        border: 2px solid var(--color-font);
+        transition: all 150ms ease-out;
+    }
+    .pointer {
+        @include cursor-style;
+        width: 7px;
+        height: 7px;
+        background: var(--color-font);
+    }
+}

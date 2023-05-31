@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+    font-family: 'Coolvetica';
+    src:url('assets/fonts/Coolvetica.ttf.woff') format('woff'),
+    url('assets/fonts/Coolvetica.ttf.eot'),
+    url('assets/fonts/Coolvetica.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color-font : #fff;
+    --color-font-small : #C0C0C0;
+    --color-background: #1E1E1E;
+    --color-extra: #fa7970;
+    --timeAnimation : 0.5s;
+    --font-size_normal: 0.8vw;
+}
+
+@mixin cursor-style {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+@mixin section-style {
+    height: 100vh;
+    width: 100vw;
+    cursor: none;
+    display: flex;
+    color: var(--color-font);
+}
+@mixin part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+    position: absolute;
+    padding: 2rem;
+    font-weight: bold;
+}
+@mixin header-content {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size_normal);
+}
+@mixin load-style {
+    position: absolute;
+    height: 100vh;
+    z-index: 100;
+    transform: translate(-100%, 0);
+    @keyframes end-of-load {
+        0% { left: 0 }
+        50% { width: 10vw }
+        100% {
+            left: 110%;
+            width: 5vw;
+        }
+    }
+}
+@mixin footerContentPart {
+    display: flex;
+    font-size: 0.8vw;
+}

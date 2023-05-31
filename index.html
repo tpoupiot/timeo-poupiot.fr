@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="styles/root.scss" rel="stylesheet">
+    <link href="styles/global.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/cursor.css" rel="stylesheet">
     <script src="scripts/script.js"></script>
     <script src="scripts/pages.js"></script>
 </head>
@@ -26,10 +29,10 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li class="canHover home"><a href="#"><span>ACCUEIL</span></a></li>
-                    <li class="canHover competences"><a href="#"><span>COMPETENCES</span></a></li>
-                    <li class="canHover interest"><a href="#"><span>INTERETS</span></a></li>
-                    <li class="canHover contact"><a href="#"><span>CONTACT</span></a></li>
+                    <li class="canHover home"><a><span>ACCUEIL</span></a></li>
+                    <li class="canHover competences"><a><span>COMPETENCES</span></a></li>
+                    <li class="canHover interest"><a><span>INTERETS</span></a></li>
+                    <li class="canHover contact"><a><span>CONTACT</span></a></li>
                 </ul>
             </nav>
             <div class="right-content_header canHover">
@@ -111,16 +114,18 @@
         <div class="separator"></div>
         <div class="main">
             <div class="titles">
-                <h1></h1>
-                <h1></h1>
-                <h1></h1>
+                <h1 class="canHover">à pro pos</h1>
             </div>
 
             <div class="content">
-                <p></p>
-                <div>
-                    <img src="" alt="">
-                    <div class="separator"></div>
+                <div class="presentation">
+                    <p>Étudiant <small>en</small> BUT Informatique, <small>je suis</small> <strong>passionné</strong> <small>par le</small> développement web.
+                        <small>J'ai pour</small> ambition <small>de devenir</small> <strong>développeur web</strong> fullstack <small>afin de</small> concevoir
+                        les sitewebs de demain !</p>
+                    <div class="image-id">
+                        <img src="assets/img/photo_id.jpg" alt="">
+                        <div class="separator-img"></div>
+                    </div>
                 </div>
                 <nav class="contacts">
                     <ul>

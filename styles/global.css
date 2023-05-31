@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@font-face {
+  font-family: "Coolvetica";
+  src: url("assets/fonts/Coolvetica.ttf.woff") format("woff"), url("assets/fonts/Coolvetica.ttf.eot"), url("assets/fonts/Coolvetica.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --color-font: #fff;
+  --color-font-small: #C0C0C0;
+  --color-background: #1E1E1E;
+  --color-extra: #fa7970;
+  --timeAnimation: 0.5s;
+  --font-size_normal: 0.8vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--color-font);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/*# sourceMappingURL=global.css.map */
