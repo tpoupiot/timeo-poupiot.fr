@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let mouse_y = e.clientY + scrollY
         if (homeSection.style.display !== 'none') {
             for (let element of cont) {
-                let elem_x = elPos(element).clientX
-                let elem_y = elPos(element).clientY
+                let elem_x = elPos(element).clientX + 20
+                let elem_y = elPos(element).clientY + 20
                 const angle = Math.atan2(mouse_y - elem_y, mouse_x - elem_x)
                 element.style.transform = `rotate(${angle}rad)`
             }
