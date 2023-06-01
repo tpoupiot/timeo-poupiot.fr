@@ -7,6 +7,11 @@
     text-decoration: none;
     //box-shadow: rgba(255, 0, 0, 0.5) 0 0 0 1px;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Space Mono", monospace;
     overflow-x: hidden;

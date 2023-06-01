@@ -22,9 +22,10 @@
         <div class="end-of-load"></div>
         <div class="end-of-load2"></div>
         <div class="grain"></div>
+
         <header>
-            <div class="left-content_header canHover">
-                <a href=""><img src="assets/svg/red_cross.svg" alt="logo"></a>
+            <div class="header-contentL canHover">
+                <a href="#"><img src="assets/svg/red_cross.svg" alt="logo"></a>
                 <span>tim. | Portfolio</span>
             </div>
             <nav class="menu">
@@ -35,8 +36,8 @@
                     <li class="canHover contact"><a><span>CONTACT</span></a></li>
                 </ul>
             </nav>
-            <div class="right-content_header canHover">
-                <a href="#"><span>[FR]</span></a>
+            <div class="header-contentR canHover">
+                <a href="assets/pdf/CV_POUPIOT.pdf" download>MON CV</a>
             </div>
         </header>
         <main>
@@ -92,16 +93,17 @@
             </div>
         </main>
         <footer>
-            <div class="left-content_footer">
+            <div class="footer-contentL">
                 <span>made by <strong>Timéo Poupiot</strong></span>
                 <span><strong>[2023] edition</strong></span>
             </div>
 
-            <div class="mycv canHover" >
-                <a download="assets/pdf/CV_POUPIOT.pdf"><span>Mon cv</span></a>
-            </div>
+            <a href="#about" class="discover canHover">
+                <span >Me découvrir</span>
+                <img src="assets/svg/arrow_down.svg" alt="arrow down">
+            </a>
 
-            <div class="right-content_footer canHover">
+            <div class="footer-contentR canHover">
                 <a class="canHover" href="https://github.com/baobob-dev"><img src="assets/svg/github.svg" alt="github"></a>
                 <a class="canHover" href="https://www.linkedin.com/in/tim%C3%A9o-poupiot-440a08268/"><img src="assets/svg/linkedin.svg" alt="linkedin"></a>
             </div>
@@ -110,7 +112,7 @@
             <span>PORTFOLIO</span>
         </div>
     </section>
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="separator"></div>
         <div class="main">
             <div class="titles">
@@ -128,23 +130,25 @@
                     </div>
                 </div>
                 <nav class="contacts">
-                    <ul>
-                        <li>MAIL
+                    <ul id="ul" class="ful">
+                        <li>MAIL/
                             <ul>
                                 <li>timeo.poupiot@gmail.com</li>
                             </ul>
                         </li>
-                        <li>TELEPHONE
-                            <ul>
-                                <li>0609110041</li>
-                            </ul>
-                        </li>
-                        <li>LOCALISATION
+                        <li>LOCALISATION/
                             <ul>
                                 <li>IUT de Lannion</li>
                             </ul>
                         </li>
-                        <li>RESEAUX
+                    </ul>
+                    <ul id="ul2" class="ful">
+                        <li>TELEPHONE/
+                            <ul>
+                                <li>0609110041</li>
+                            </ul>
+                        </li>
+                        <li>RESEAUX/
                             <ul>
                                 <li>linkedin</li>
                                 <li>github</li>
