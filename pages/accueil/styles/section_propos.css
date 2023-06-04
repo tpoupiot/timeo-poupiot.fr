@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --color-font: #fff;
+  --color-font-small: #C0C0C0;
+  --color-font-secondary: #1E1E1E;
+  --color-background: #1E1E1E;
+  --color-extra: #fa7970;
+  --timeAnimation: 0.5s;
+  --font-size_normal: 0.8em;
+  --z-index-header: 10;
+}
+
+.about-section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  cursor: none;
+  display: flex;
+  color: var(--color-font);
+  flex-direction: column;
+  background-color: var(--color-background);
+  color: var(--color-font);
+}
+.about-section .section-title {
+  padding: 3em 10em;
+}
+.about-section .about-content {
+  display: flex;
+  margin: 0 10em;
+  gap: 5em;
+}
+.about-section .about-content main #presentation h1 {
+  font-size: 3vw;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+  color: var(--color-extra);
+  font-family: "Trap";
+}
+.about-section .about-content main #presentation p {
+  font-size: 1.7vw;
+  margin-bottom: 1em;
+  font-family: "Inter";
+  line-height: 130%;
+  width: 80%;
+  font-weight: 200;
+}
+.about-section .about-content main #presentation p strong {
+  color: var(--color-extra);
+}
+.about-section .about-content main .separator {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 3vw 0;
+}
+.about-section .about-content main .coord h1 {
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+  font-family: "Trap";
+}
+.about-section .about-content main .coord .coord-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+.about-section .about-content main .coord .coord-content #coord-contentL, .about-section .about-content main .coord .coord-content #coord-contentR {
+  display: flex;
+  flex-direction: column;
+}
+.about-section .about-content main .coord .coord-content #coord-contentL div, .about-section .about-content main .coord .coord-content #coord-contentR div {
+  display: flex;
+  margin: 0.5em 0;
+  font-family: "Inter";
+  font-size: 1vw;
+  font-weight: 300;
+}
+.about-section .about-content main .coord .coord-content #coord-contentL div img, .about-section .about-content main .coord .coord-content #coord-contentR div img {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.5em;
+  filter: invert(1) brightness(5);
+}
+.about-section .about-content aside {
+  display: flex;
+}
+.about-section .about-content aside img {
+  display: block;
+  width: 20vw;
+  height: 20vw;
+}
+.about-section footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 120px;
+  position: absolute;
+  padding: 2rem 15em;
+  font-weight: bold;
+  justify-content: center;
+  gap: 1em;
+  bottom: 0;
+  font-size: 0.8vw;
+  opacity: 0.3;
+}
+
+/*# sourceMappingURL=section_propos.css.map */

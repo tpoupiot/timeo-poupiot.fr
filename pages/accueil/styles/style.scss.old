@@ -1,17 +1,4 @@
-@import 'root';
-
-*::-webkit-scrollbar {
-    width: 16px;
-}
-*::-webkit-scrollbar-track {
-    background: var(--color-background);
-    opacity: 0;
-}
-*::-webkit-scrollbar-thumb {
-    background-color: rgb(70, 70, 70);
-    border-radius: 10px;
-    border: 3px solid var(--color-background);
-}
+@import '../../../global_styles/root';
 
 // ================ HEADER ================ //
 header {
@@ -33,6 +20,7 @@ header {
         }
     }
     .menu {
+        letter-spacing: 0.1em;
         font-size: var(--font-size_normal);
         font-weight: bold;
         margin-right: 2em;
@@ -46,6 +34,7 @@ header {
                 padding: 1em;
                 transition: all 400ms;
                 animation: menu_anim 0.5s ease-out;
+                text-transform: uppercase;
 
                 @keyframes menu_anim  {
                     0% { transform: translateY(-200%) }
@@ -58,6 +47,7 @@ header {
         }
     }
     .header-contentR {
+        letter-spacing: 0.1em;
         a {
             @include header-content;
             background: var(--color-font);
@@ -65,6 +55,7 @@ header {
             padding: 1em 1.8em;
             border: 1px solid var(--color-font);
             transition: all 300ms;
+            border-radius: 25px;
 
             &:hover {
                 transition: all 300ms;
@@ -247,11 +238,14 @@ header {
         }
 
         .discover {
+            letter-spacing: 0.1em;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1em;
             margin-bottom: 3em;
+            width: 10vw;
+            z-index: 100;
 
             span {
                 font-size: small;
@@ -260,7 +254,7 @@ header {
 
             img {
                 filter: invert(100%);
-                width: 5%;
+                width: 25%;
                 animation: arrowAnim 1.5s ease-in-out infinite;
             }
             @keyframes arrowAnim {
@@ -297,16 +291,15 @@ header {
         position: absolute;
         top: 50%;
         left: 50%;
-        translate: -50% -50%;
+        transform:  translate(-50%, -50%);
         margin-left: -15px;
-        span {
-            font-size: 24vw;
-            letter-spacing: -0.12em;
-            user-select: none;
-            font-weight: 900;
-            opacity: 3%;
-            animation: bg_anim 1.5s ease-in-out;
-        }
+        font-size: 24vw;
+        letter-spacing: -0.12em;
+        user-select: none;
+        font-weight: 900;
+        opacity: 3%;
+        animation: bg_anim 1.5s ease-in-out;
+
         @keyframes bg_anim {
             0% {
                 letter-spacing: 0.05em;
@@ -323,10 +316,6 @@ header {
 }
 
 // ================ ABOUT SECTION ================ //
-#about {
-    scroll-behavior: smooth;
-}
-
 .about-section {
     @include section-style;
     flex-direction: column;
@@ -418,11 +407,8 @@ header {
             .presentation {
                 display: flex;
                 justify-content: space-between;
-
                 p {
-                    font-family: "Coolvetica", sans-serif;
-                    width: 27vw;
-                    margin: 2em 0 2em 2em;
+                    margin: 2em;
                     line-height: 150%;
                     text-transform: uppercase;
                     font-size: 1.5vw;
@@ -439,51 +425,33 @@ header {
                 }
 
                 .image-id {
-                    width: 22vw;
-                    height: 22vw;
                     background-color: var(--color-font);
-                    img {
-                        object-fit: 1/1;
-                    }
 
-                    .separator-img {
-                        display: flex;
-                        align-self: center;
-                        height: 0.4em;
-                        width: calc(100%);
-                        margin: 1.5em 0;
-                        background-color: var(--color-font);
+                    img {
+                        width: 20vw;
+                        height: 20vw;
                     }
                 }
             }
-            nav.contacts {
+            .contacts {
                 display: flex;
                 justify-content: space-between;
                 margin-top: 2em;
 
-                ul {
-                    display: flex;
-                    flex-direction: column;
-                }
+                contactL {
 
-                #ul2 {
-                    margin-right: 10vw;
-                }
-
-                li {
-                    list-style: none;
-                }
-
-                .ful > li {
-                    color: #C0C0C0;
                 }
             }
 
         }
         footer {
-            display: flex;
+            @include footerContentPart;
             grid-area: 5 / 3 / 6 / 6;
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+            opacity: 0.5;
         }
     }
 
