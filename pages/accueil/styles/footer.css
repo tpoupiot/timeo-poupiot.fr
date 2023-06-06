@@ -18,46 +18,22 @@
   --z-index-header: 10;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Space Mono", monospace;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-a {
-  color: var(--color-font);
-}
-
-img {
-  width: 100%;
-  height: 100%;
+footer.footer {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  cursor: none;
   display: flex;
-}
-
-*::-webkit-scrollbar {
-  width: 16px;
-}
-
-*::-webkit-scrollbar-track {
+  color: var(--color-font);
   background: var(--color-background);
-  opacity: 0;
+  position: static;
+  justify-content: center;
+  height: 10vh;
+  gap: 1em;
+  font-size: 0.8vw;
+}
+footer.footer span {
+  opacity: 0.3;
 }
 
-*::-webkit-scrollbar-thumb {
-  background-color: rgb(70, 70, 70);
-  border-radius: 10px;
-  border: 3px solid var(--color-background);
-}
-
-/*# sourceMappingURL=global.css.map */
+/*# sourceMappingURL=footer.css.map */

@@ -2,19 +2,20 @@
 
 // ================ ABOUT SECTION ================ //
 .about-section {
-	position: relative;
 	@include section-style;
+	@include responsive;
+	padding: 0 15em;
 	flex-direction: column;
+	position: relative;
 	background-color: var(--color-background);
 	color: var(--color-font);
-	
+
 	.section-title {
-		padding: 3em 10em;
+		margin: 3em 0;
 	}
-	
+
 	.about-content {
 		display: flex;
-		margin: 0 10em;
 		gap: 5em;
 		main {
 			#presentation {
@@ -23,13 +24,13 @@
 					font-weight: 600;
 					margin-bottom: 0.8em;
 					color: var(--color-extra);
-					font-family: "Trap";
+					font-family: "Trap", sans-serif;
 				}
 				
 				p {
 					font-size: 1.7vw;
 					margin-bottom: 1em;
-					font-family: "Inter";
+					font-family: Inter, sans-serif;
 					line-height: 130%;
 					width: 80%;
 					font-weight: 200;
@@ -50,7 +51,7 @@
 					font-size: 1.5vw;
 					font-weight: 600;
 					margin-bottom: 0.8em;
-					font-family: "Trap";
+					font-family: "Trap", sans-serif;
 				}
 				.coord-content {
 					display: flex;
@@ -86,13 +87,5 @@
 				height: 20vw;
 			}
 		}
-	}
-	footer {
-		@include part-style;
-		justify-content: center;
-		gap: 1em;
-		bottom: 0;
-		font-size: 0.8vw;
-		opacity: 0.3;
 	}
 }

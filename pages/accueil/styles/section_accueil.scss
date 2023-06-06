@@ -61,16 +61,17 @@
 				display: flex;
 				flex-direction: column;
 				justify-self: flex-start;
-				font-size: 4vw;
+				font-size: 3vw;
 				font-weight: bold;
 				line-height: 110%;
 				//letter-spacing: -0.05em;
-				margin-left: 1em;
+				margin-left: 2em;
 			}
 			.firstname, .lastname {
 				display: flex;
 				overflow: hidden;
 				margin: -0.5vw;
+
 				@for $i from 1 through 5 {
 					.firstname_letter:nth-child(#{$i}) {
 						animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * #{$i}) forwards;

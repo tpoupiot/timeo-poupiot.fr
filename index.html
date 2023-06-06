@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
-    <link href="../../global_styles/global.css" rel="stylesheet">
-    <link href="../../global_styles/cursor.css" rel="stylesheet">
+    <link href="global_styles/global.css" rel="stylesheet">
+    <link href="global_styles/cursor.css" rel="stylesheet">
 
-    <link href="styles/menu.css" rel="stylesheet">
-    <link href="styles/section_accueil.css" rel="stylesheet">
-    <link href="styles/section_propos.css" rel="stylesheet">
+    <link href="pages/accueil/styles/menu.css" rel="stylesheet">
+    <link href="pages/accueil/styles/section_accueil.css" rel="stylesheet">
+    <link href="pages/accueil/styles/section_propos.css" rel="stylesheet">
+    <link href="pages/accueil/styles/footer.css" rel="stylesheet">
 
-    <script src="../../scripts/script.js"></script>
-    <script src="../../scripts/pages.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/pages.js"></script>
 </head>
 <body>
     <div class="cursor">
@@ -28,19 +29,19 @@
 
         <header>
             <div class="header-contentL canHover">
-                <a href="#"><img src="../../assets/svg/red_cross.svg" alt="logo"></a>
-                <span>tim. | Portfolio</span>
+                <a href="#"><img src="assets/svg/red_cross.svg" alt="logo"></a>
+                <span>tim.</span>
             </div>
             <nav class="menu">
                 <ul>
-                    <li class="canHover home"><a>accueil</a></li>
-                    <li class="canHover competences"><a>Competences</a></li>
-                    <li class="canHover interest"><a>à propos</a></li>
-                    <li class="canHover contact"><a>Contact</a></li>
+                    <li class="canHover home"><a href="../accueil/index.html">accueil</a></li>
+                    <li class="canHover competences"><a href="pages/competences/index.html">Competences</a></li>
+                    <li class="canHover interest"><a href="pages/competences/index.html">à propos</a></li>
+                    <li class="canHover contact"><a href="pages/competences/index.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-contentR canHover">
-                <a href="../../assets/pdf/CV_POUPIOT.pdf" download>MON CV</a>
+                <a href="assets/pdf/CV_POUPIOT.pdf" download>MON CV</a>
             </div>
         </header>
         <main>
@@ -98,15 +99,8 @@
         <footer>
             <a href="#about" class="discover canHover">
                 <span >Me découvrir</span>
-                <img src="../../assets/svg/arrow_down.svg" alt="arrow down">
+                <img src="assets/svg/arrow_down.svg" alt="arrow down">
             </a>
-
-            <!--
-            <div class="footer-contentR">
-                <a class="canHover" href="https://github.com/baobob-dev"><img src="../../assets/svg/github.svg" alt="github"></a>
-                <a class="canHover" href="https://www.linkedin.com/in/tim%C3%A9o-poupiot-440a08268/"><img src="../../assets/svg/linkedin.svg" alt="linkedin"></a>
-            </div>
-            -->
         </footer>
         <span class="background">PORTFOLIO</span>
     </section>
@@ -128,21 +122,21 @@
                     <div class="coord-content">
                         <div id="coord-contentL">
                             <div>
-                                <img src="../../assets/svg/mail.svg" alt="">
+                                <img src="assets/svg/mail.svg" alt="">
                                 <span>timeo.poupiot35700@gmail.com</span>
                             </div>
                             <div>
-                                <img src="../../assets/svg/phone.svg" alt="">
+                                <img src="assets/svg/phone.svg" alt="">
                                 <span>06 09 11 00 41</span>
                             </div>
                         </div>
                         <div id="coord-contentR">
                             <div>
-                                <img src="../../assets/svg/academic.svg" alt="">
+                                <img src="assets/svg/academic.svg" alt="">
                                 <span>IUT de Lannion</span>
                             </div>
                             <div>
-                                <img src="../../assets/svg/location.svg" alt="">
+                                <img src="assets/svg/location.svg" alt="">
                                 <span>Cesson-Sévigné (35510), FRANCE</span>
                             </div>
                         </div>
@@ -150,21 +144,14 @@
                 </div>
             </main>
             <aside>
-                <img src="../../assets/img/photo_id.jpg" alt="">
+                <img src="assets/img/photo_id.jpg" alt="">
             </aside>
         </div>
-
-        <footer>
-            <span>made by <strong>Timéo Poupiot</strong></span>
-            <span><strong>[2023] edition</strong></span>
-        </footer>
     </section>
 
-    <section class="competence-section">
-    </section>
-    <section class="interet-section">
-    </section>
-    <section class="contact-section">
-    </section>
+    <footer class="footer">
+        <span>made by <strong>Timéo Poupiot</strong></span>
+        <span><strong>[2023] edition</strong></span>
+    </footer>
 </body>
 </html>
