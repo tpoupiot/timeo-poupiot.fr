@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Gnomon";
+  src: url("../assets/fonts/Gnomon-Foreground.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Rakkas";
+  src: url("../assets/fonts/Rakkas-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+:root {
+  --color-font: #fff;
+  --color-font-small: #C0C0C0;
+  --color-font-secondary: #010504;
+  --color-background: #010504;
+  --color-extra: #f24934;
+  --timeAnimation: 0.5s;
+  --font-size_normal: 0.8em;
+  --full-width: calc(100vw - 15px);
+  --z-index-header: 10;
+}
+
+body {
+  background: var(--color-background);
+}
+
+.end-of-load {
+  position: absolute;
+  height: 100vh;
+  z-index: 100;
+  transform: translate(-100%, 0);
+  width: 2vw;
+  background-color: var(--color-extra);
+  animation: end-of-load 1s ease-in-out 0.5s forwards;
+  mix-blend-mode: difference;
+}
+@keyframes end-of-load {
+  0% {
+    left: 0;
+  }
+  50% {
+    width: 6vw;
+  }
+  100% {
+    left: 110%;
+    width: 3vw;
+  }
+}
+
+.end-of-load2 {
+  position: absolute;
+  height: 100vh;
+  z-index: 100;
+  transform: translate(-100%, 0);
+  width: 3vw;
+  background-color: var(--color-font);
+  animation: end-of-load 0.75s ease-in-out 0.7s forwards;
+  mix-blend-mode: exclusion;
+}
+@keyframes end-of-load {
+  0% {
+    left: 0;
+  }
+  50% {
+    width: 6vw;
+  }
+  100% {
+    left: 110%;
+    width: 3vw;
+  }
+}
+
+#home-section {
+  height: 100vh;
+  width: var(--full-width);
+  overflow: hidden;
+  color: var(--color-font);
+}
+#home-section header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--full-width);
+  height: 120px;
+  font-weight: bold;
+  padding: 2rem 15vw;
+  z-index: 5;
+  animation: headerAnim 1s ease-in-out;
+}
+@media (max-width: 1400px) {
+  #home-section header {
+    padding: 2em 10em;
+  }
+}
+@media (max-width: 1200px) {
+  #home-section header {
+    padding: 2em 2em;
+  }
+}
+@media (max-width: 900px) {
+  #home-section header #header-logo span {
+    display: none;
+  }
+}
+#home-section header #header-logo {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+#home-section header #header-logo a {
+  display: flex;
+  align-items: center;
+}
+#home-section header #header-logo a img {
+  width: 80%;
+}
+#home-section header #header-menu {
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  margin-right: 2em;
+  transition: all 300ms;
+}
+#home-section header #header-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2em;
+}
+#home-section header #header-menu ul li {
+  padding: 1em;
+  text-transform: uppercase;
+}
+#home-section header #header-menu ul li:hover a {
+  color: var(--color-extra);
+}
+@keyframes headerAnim {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#home-section #header-extra {
+  letter-spacing: 0.1em;
+}
+#home-section #header-extra a {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size_normal);
+  background: var(--color-background);
+  color: var(--color-font);
+  padding: 1em 1.8em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 300ms;
+}
+#home-section #header-extra a:hover {
+  transition: all 300ms;
+  background: var(--color-font);
+  color: var(--color-background);
+}
+#home-section main {
+  height: calc(100vh - 240px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20vw;
+  flex: 1;
+}
+@media (max-width: 1400px) {
+  #home-section main {
+    padding: 2em 15em;
+  }
+}
+@media (max-width: 1200px) {
+  #home-section main {
+    padding: 2em 10em;
+  }
+}
+#home-section main #hero_banner {
+  display: flex;
+  flex-direction: column;
+  font-family: Gnomon, sans-serif;
+}
+@keyframes firstname_anim {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#home-section main #hero_banner #hero_firstname {
+  font-family: Rakkas, cursive;
+  overflow: hidden;
+}
+#home-section main #hero_banner #hero_firstname .hero-age {
+  margin-left: 2em;
+  font-family: "Space Mono", monospace;
+  font-size: 1.5vw;
+  font-weight: normal;
+  text-transform: uppercase;
+  opacity: 50%;
+  transform: translateY(100%);
+  animation: ageAnim 0.5s ease-in-out 1.5s forwards;
+}
+@keyframes ageAnim {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#home-section main #hero_banner #hero_firstname .hero-letter:nth-child(1) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 1) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_firstname .hero-letter:nth-child(2) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 2) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_firstname .hero-letter:nth-child(3) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 3) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_firstname .hero-letter:nth-child(4) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 4) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_firstname .hero-letter:nth-child(5) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 5) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_lastname {
+  font-size: 5vw;
+  overflow: hidden;
+}
+#home-section main #hero_banner #hero_lastname .hero-letter:nth-child(1) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 1) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_lastname .hero-letter:nth-child(2) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 2) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_lastname .hero-letter:nth-child(3) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 3) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_lastname .hero-letter:nth-child(4) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 4) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_lastname .hero-letter:nth-child(5) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 5) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_lastname .hero-letter:nth-child(6) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 6) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_lastname .hero-letter:nth-child(7) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 7) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_first-word {
+  font-family: Rakkas, cursive;
+  font-weight: normal;
+  overflow: hidden;
+}
+#home-section main #hero_banner #hero_first-word .hero-letter:nth-child(1) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 1) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_first-word .hero-letter:nth-child(2) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 2) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_first-word .hero-letter:nth-child(3) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 3) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word {
+  font-size: 5vw;
+  overflow: hidden;
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(1) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 1) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(2) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 2) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(3) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 3) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(4) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 4) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(5) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 5) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(6) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 6) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(7) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 7) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(8) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 8) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(9) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 9) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(10) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 10) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner #hero_last-word .hero-letter:nth-child(11) {
+  animation: firstname_anim 0.5s ease-out calc(var(--timeAnimation) + 0.05s * 11) forwards;
+  transform: translateY(100%);
+}
+#home-section main #hero_banner .hero-content {
+  display: flex;
+  flex-direction: row;
+  font-size: 4vw;
+  text-transform: uppercase;
+  line-height: 80%;
+}
+#home-section main #hero_banner .hero-content .letter-extra {
+  color: var(--color-extra);
+}
+#home-section main #hero_banner .separator {
+  width: 0;
+  height: 1px;
+  margin: 4em 0;
+  background: white;
+  opacity: 70%;
+  animation: sepAnim 0.5s ease-in-out 0.8s forwards;
+}
+@keyframes sepAnim {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 200px;
+  }
+}
+#home-section main #hero_banner #hero_text-extra {
+  font-family: "Space Mono", monospace;
+  font-size: 1vw;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 50%;
+  overflow: hidden;
+}
+#home-section main #hero_banner #hero_text-extra div {
+  transform: translateY(-100%);
+  animation: textAnim 0.5s ease-in-out 1.5s forwards;
+}
+@keyframes textAnim {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#home-section main #hero_banner #hero_text-extra div u {
+  text-decoration: underline;
+  font-style: normal;
+}
+#home-section main #compass {
+  position: relative;
+  animation: compassAnim 1.3s ease-in-out 0.1s forwards;
+  transform-origin: center;
+  transform: rotate(-45deg) scale(0.8);
+}
+#home-section main #compass #arrow_compass {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+}
+#home-section main #compass #arrow_compass #head-arrow {
+  width: 20px;
+  height: 20px;
+  border-width: 3px 0 0 3px;
+  border-style: solid;
+  border-color: #FFFFFF;
+  transform: translate(0, calc(50% + 1.5px)) rotate(-45deg);
+}
+#home-section main #compass #arrow_compass #body-arrow {
+  width: 120px;
+  height: 3px;
+  background: white;
+}
+#home-section main #compass #arrow_compass #arrow-inv {
+  width: 20px;
+  height: 20px;
+}
+@keyframes compassAnim {
+  0% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+#home-section main #compass img {
+  width: 20vw;
+  height: 20vw;
+}
+#home-section footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  height: 120px;
+}
+#home-section footer .discover {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  padding: 0.8em 1.3em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 300ms;
+  animation: discoverAnim 1s ease-in-out;
+}
+@keyframes discoverAnim {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#home-section footer .discover span {
+  font-size: small;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 1em;
+}
+#home-section footer .discover img {
+  filter: invert(100%);
+  width: 15px;
+  animation: arrowAnim 1.5s ease-in-out infinite;
+}
+@keyframes arrowAnim {
+  0%, 100% {
+    transform: translateY(-0.15em);
+  }
+  50% {
+    transform: translateY(0.15em);
+  }
+}
+#home-section footer .discover:hover {
+  background: var(--color-font);
+}
+#home-section footer .discover:hover span {
+  color: var(--color-background);
+}
+#home-section footer .discover:hover img {
+  filter: invert(0%);
+  animation: none;
+}
+
+.about-section {
+  height: 100vh;
+  width: var(--full-width);
+  overflow: hidden;
+  color: var(--color-font);
+  padding: 0 15em;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-background);
+  color: var(--color-font);
+}
+
+/*# sourceMappingURL=style.css.map */
