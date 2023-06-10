@@ -1,173 +1,149 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <link href="styles/root.scss" rel="stylesheet">
-    <link href="styles/global.css" rel="stylesheet">
-    <link href="styles/style.css" rel="stylesheet">
-    <link href="styles/cursor.css" rel="stylesheet">
-    <script src="scripts/script.js"></script>
-    <script src="scripts/pages.js"></script>
+    <link href="style_global/global.css" rel="stylesheet">
+    <link href="style_global/cursor.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <script src="js_global/script.js"></script>
+    <script src="js_global/pages.js"></script>
+    <title>Tim</title>
 </head>
+
 <body>
     <div class="cursor">
         <div class="circle"></div>
         <div class="pointer"></div>
     </div>
+    <div class="end-of-load"></div>
+    <div class="end-of-load2"></div>
 
-    <section class="loading-section"></section>
-
-    <section class="home-section">
-        <div class="end-of-load"></div>
-        <div class="end-of-load2"></div>
-        <div class="grain"></div>
+    <section id="home-section">
         <header>
-            <div class="left-content_header canHover">
-                <a href=""><img src="assets/svg/red_cross.svg" alt="logo"></a>
-                <span>tim. | Portfolio</span>
+            <div id="header-logo">
+                <a class="canHover" href="#"><img src="assets/svg/red_cross.svg" alt="logo"></a>
+                <span>||||</span>
             </div>
-            <nav class="menu">
+            <nav id="header-menu">
                 <ul>
-                    <li class="canHover home"><a><span>ACCUEIL</span></a></li>
-                    <li class="canHover competences"><a><span>COMPETENCES</span></a></li>
-                    <li class="canHover interest"><a><span>INTERETS</span></a></li>
-                    <li class="canHover contact"><a><span>CONTACT</span></a></li>
+                    <li class="canHover"><a href="">ACCUEIL</a></li>
+                    <li class="canHover"><a href="">COMPETENCES</a></li>
+                    <li class="canHover"><a href="">INTERETS</a></li>
+                    <li class="canHover"><a href="">CONTACT</a></li>
                 </ul>
             </nav>
-            <div class="right-content_header canHover">
-                <a href="#"><span>[FR]</span></a>
+            <div id="header-extra">
+                <a class="canHover" href="" download>MON CV</a>
             </div>
         </header>
+
         <main>
-            <div class="title">
-                <div class="title_name title_text">
-                    <div class="firstname">
-                        <div class="firstname_letter"><span>t</span></div>
-                        <div class="firstname_letter"><span>i</span></div>
-                        <div class="firstname_letter"><span>m</span></div>
-                        <div class="firstname_letter"><span>e</span></div>
-                        <div class="firstname_letter"><span>o</span></div>
+            <article id="hero_banner">
+                <div id="hero_name">
+                    <div id="hero_firstname" class="hero-content">
+                        <div class="hero-letter">t</div>
+                        <div class="hero-letter">i</div>
+                        <div class="hero-letter">m</div>
+                        <div class="hero-letter">e</div>
+                        <div class="hero-letter">o</div>
+                        <div class="hero-age">18</div>
                     </div>
-                    <div class="lastname">
-                        <div class="lastname_letter"><span>p</span></div>
-                        <div class="lastname_letter"><span>o</span></div>
-                        <div class="lastname_letter"><span>u</span></div>
-                        <div class="lastname_letter"><span>p</span></div>
-                        <div class="lastname_letter"><span>i</span></div>
-                        <div class="lastname_letter"><span>o</span></div>
-                        <div class="lastname_letter"><span>t</span></div>
-                    </div>
-                </div>
-                <div class="title_separator">
-                    <div class="separator_item"></div>
-                    <div class="separator_item"></div>
-                    <div class="separator_item"></div>
-                    <div class="separator_item"></div>
-                    <div class="separator_item"></div>
-                </div>
-
-                <div class="summary"></div>
-
-                <div class="title_skill title_text">
-                    <div class="skill-firstname">
-                        <div class="skill-firstname_letter"><span>w</span></div>
-                        <div class="skill-firstname_letter"><span>e</span></div>
-                        <div class="skill-firstname_letter"><span>b</span></div>
-                    </div>
-                    <div class="skill-lastname">
-                        <div class="skill-lastname_letter"><span>d</span></div>
-                        <div class="skill-lastname_letter"><span>e</span></div>
-                        <div class="skill-lastname_letter"><span>v</span></div>
-                        <div class="skill-lastname_letter"><span>e</span></div>
-                        <div class="skill-lastname_letter"><span>l</span></div>
-                        <div class="skill-lastname_letter"><span>o</span></div>
-                        <div class="skill-lastname_letter"><span>p</span></div>
-                        <div class="skill-lastname_letter"><span>p</span></div>
-                        <div class="skill-lastname_letter"><span>e</span></div>
-                        <div class="skill-lastname_letter"><span>u</span></div>
-                        <div class="skill-lastname_letter"><span>r</span></div>
+                    <div id="hero_lastname" class="hero-content">
+                        <div class="hero-letter">p</div>
+                        <div class="hero-letter">o</div>
+                        <div class="hero-letter">u</div>
+                        <div class="hero-letter">p</div>
+                        <div class="hero-letter">i</div>
+                        <div class="hero-letter">o</div>
+                        <div class="hero-letter">t</div>
                     </div>
                 </div>
+                <div class="separator"></div>
+                <div id="hero_text">
+                    <div id="hero_first-word" class="hero-content">
+                        <div class="hero-letter letter-extra">w</div>
+                        <div class="hero-letter letter-extra">e</div>
+                        <div class="hero-letter letter-extra">b</div>
+                    </div>
+                    <div id="hero_last-word" class="hero-content">
+                        <div class="hero-letter">d</div>
+                        <div class="hero-letter">e</div>
+                        <div class="hero-letter">v</div>
+                        <div class="hero-letter">e</div>
+                        <div class="hero-letter">l</div>
+                        <div class="hero-letter">o</div>
+                        <div class="hero-letter">p</div>
+                        <div class="hero-letter">p</div>
+                        <div class="hero-letter">e</div>
+                        <div class="hero-letter">u</div>
+                        <div class="hero-letter">r</div>
+                    </div>
+                </div>
+                <div id="hero_text-extra">
+                    <div>"LE FUTUR A ÉTÉ CRÉÉ POUR ÊTRE CHANGÉ."<br><u>PAULO C.</u></div>
+                </div>
+            </article>
+            <div id="compass">
+                <div id="arrow_compass">
+                    <div id="head-arrow"></div>
+                    <div id="body-arrow"></div>
+                    <div id="arrow-inv"></div>
+                </div>
+                <img src="assets/svg/compass.svg" alt="">
             </div>
         </main>
+
         <footer>
-            <div class="left-content_footer">
-                <span>made by <strong>Timéo Poupiot</strong></span>
-                <span><strong>[2023] edition</strong></span>
-            </div>
-
-            <div class="mycv canHover" >
-                <a download="assets/pdf/CV_POUPIOT.pdf"><span>Mon cv</span></a>
-            </div>
-
-            <div class="right-content_footer canHover">
-                <a class="canHover" href="https://github.com/baobob-dev"><img src="assets/svg/github.svg" alt="github"></a>
-                <a class="canHover" href="https://www.linkedin.com/in/tim%C3%A9o-poupiot-440a08268/"><img src="assets/svg/linkedin.svg" alt="linkedin"></a>
-            </div>
+            <a class="discover canHover" href="#about">
+                <span>ME DÉCOUVRIR</span>
+                <img src="assets/svg/arrow_down.svg" alt="">
+            </a>
         </footer>
-        <div class="background">
-            <span>PORTFOLIO</span>
-        </div>
     </section>
-    <section class="about-section">
-        <div class="separator"></div>
-        <div class="main">
-            <div class="titles">
-                <h1 class="canHover">à pro pos</h1>
-            </div>
+    <section class="about-section" id="about">
+        <span class="section-title">A PROPOS</span>
+        <div class="about-content">
+            <main>
+                <div id="presentation">
+                    <h1>Introduction</h1>
+                    <p>Étudiant en BUT Informatique, je suis <strong>passionné</strong> par le développement web.
+                        J'ai pour ambition de devenir <strong>développeur web</strong> fullstack afin de concevoir
+                        les site webs de demain !  </p>
+                </div>
 
-            <div class="content">
-                <div class="presentation">
-                    <p>Étudiant <small>en</small> BUT Informatique, <small>je suis</small> <strong>passionné</strong> <small>par le</small> développement web.
-                        <small>J'ai pour</small> ambition <small>de devenir</small> <strong>développeur web</strong> fullstack <small>afin de</small> concevoir
-                        les sitewebs de demain !</p>
-                    <div class="image-id">
-                        <img src="assets/img/photo_id.jpg" alt="">
-                        <div class="separator-img"></div>
+                <div class="separator"></div>
+
+                <div class="coord">
+                    <h1>Mes coordonnees</h1>
+                    <div class="coord-content">
+                        <div id="coord-contentL">
+                            <div>
+                                <img src="assets/svg/mail.svg" alt="">
+                                <span>timeo.poupiot35700@gmail.com</span>
+                            </div>
+                            <div>
+                                <img src="assets/svg/phone.svg" alt="">
+                                <span>06 09 11 00 41</span>
+                            </div>
+                        </div>
+                        <div id="coord-contentR">
+                            <div>
+                                <img src="assets/svg/academic.svg" alt="">
+                                <span>IUT de Lannion</span>
+                            </div>
+                            <div>
+                                <img src="assets/svg/location.svg" alt="">
+                                <span>Cesson-Sévigné (35510), FRANCE</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <nav class="contacts">
-                    <ul id="ul" class="ful">
-                        <li>MAIL/
-                            <ul>
-                                <li>timeo.poupiot@gmail.com</li>
-                            </ul>
-                        </li>
-                        <li>LOCALISATION/
-                            <ul>
-                                <li>IUT de Lannion</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul id="ul2" class="ful">
-                        <li>TELEPHONE/
-                            <ul>
-                                <li>0609110041</li>
-                            </ul>
-                        </li>
-                        <li>RESEAUX/
-                            <ul>
-                                <li>linkedin</li>
-                                <li>github</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-            <footer>
-                <span>made by <strong>Timéo Poupiot</strong></span>
-                <span><strong>[2023] edition</strong></span>
-            </footer>
+            </main>
+            <aside>
+                <img src="assets/img/photo_id.jpg" alt="">
+            </aside>
         </div>
-    </section>
-
-    <section class="competence-section">
-    </section>
-    <section class="interet-section">
-    </section>
-    <section class="contact-section">
     </section>
 </body>
 </html>
