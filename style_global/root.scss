@@ -59,7 +59,7 @@
 }
 @mixin load-style {
     position: absolute;
-    height: 100vh;
+    height: 200vh;
     z-index: 100;
     transform: translate(-100%, 0);
     @keyframes end-of-load {
@@ -90,6 +90,18 @@
     }
     @media (max-width: 1200px) {
         padding: 2em 10em;
+    }
+}
+
+@mixin about-responsive {
+    @media (max-width: 1400px) {
+        padding: 0 15em;
+    }
+    @media (max-width: 1200px) {
+        padding: 0 10em;
+    }
+    @media (max-width: 900px) {
+        padding: 0 2em;
     }
 }
 
