@@ -74,7 +74,7 @@
                 }
             }
             #hero_lastname {
-                font-size: 5vw;
+                font-size: var(--title-size-gnomon);
                 overflow: hidden;
                 @for $letter from 1 through 7 {
                     .hero-letter:nth-child(#{$letter}) {
@@ -95,7 +95,7 @@
                 }
             }
             #hero_last-word {
-                font-size: 5vw;
+                font-size: var(--title-size-gnomon);
                 overflow: hidden;
                 @for $letter from 1 through 11 {
                     .hero-letter:nth-child(#{$letter}) {
@@ -108,7 +108,7 @@
             .hero-content {
                 display: flex;
                 flex-direction: row;
-                font-size: 4vw;
+                font-size: var(--title-size-rakkas);
                 text-transform: uppercase;
                 line-height: 80%;
                 .letter-extra {
@@ -310,13 +310,13 @@
             justify-content: space-between;
 
             h1{
-                font-size: 5vw;
+                font-size: var(--title-size-gnomon);
                 font-weight: normal;
                 font-family: Gnomon, sans-serif;
                 line-height: 80%;
 
                 strong {
-                    font-size: 4vw;
+                    font-size: var(--title-size-rakkas);
                     font-family: Rakkas, cursive;
                     font-weight: normal;
                     text-transform: uppercase;
@@ -386,6 +386,17 @@
                     &:hover {
                         background: var(--color-font);
                         color: var(--color-background);
+                        img {
+                            filter: invert(0%);
+                        }
+                    }
+                    img {
+                        display: flex;
+                        filter: invert(100%);
+                        width: 15px;
+                        height: 15px;
+                        transform: rotate(-90deg);
+                        margin-left: 1em;
                     }
                 }
             }

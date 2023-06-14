@@ -26,7 +26,7 @@ main {
 
             h1 {
                 font-family: Rakkas, serif;
-                font-size: 3.5em;
+                font-size: 2.8vw;
                 text-transform: uppercase;
                 font-weight: normal;
                 margin: 0 0 0 1em;
@@ -46,6 +46,23 @@ main {
                 margin-left: -2em;
                 transition: all 500ms ease-in-out;
             }
+
+            @keyframes compAnim {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @for $comp from 1 through 12 {
+                &:nth-child(#{$comp}) {
+                    animation: compAnim 0.95s ease-out calc(var(--timeAnimation) + 0.02s * #{$comp}) forwards;
+                    opacity: 0;
+                }
+            }
+
         }
         .separator {
             width: 100%;

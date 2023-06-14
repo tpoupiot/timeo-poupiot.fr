@@ -32,16 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("mousemove", (e) => {
         const mouse_x = e.clientX + scrollX
         const mouse_y = e.clientY + scrollY
-
         circle.style.transform = `translate3d(${mouse_x}px, ${mouse_y}px, 0)`
         pointer.style.transform = `translate3d(${mouse_x}px, ${mouse_y}px, 0)`
-
-        const arrowBox = arrow.getBoundingClientRect()
-        const xCenter = (arrowBox.left + arrowBox.right)/2
-        const yCenter = (arrowBox.top + arrowBox.bottom) / 2 + scrollY
-
-        const angle = Math.atan2(mouse_y - yCenter, mouse_x - xCenter)
-        arrow.style.transform = `translate(-50%, -50%) rotate(${angle}rad) rotate(180deg)`
-    })
+    });
+    if (arrow != null) {
+        document.addEventListener("mousemove", (e) => {
+            const mouse_x = e.clientX + scrollX
+            const mouse_y = e.clientY + scrollY
+            const arrowBox = arrow.getBoundingClientRect()
+            const xCenter = (arrowBox.left + arrowBox.right)/2
+            const yCenter = (arrowBox.top + arrowBox.bottom) / 2 + scrollY
+            const angle = Math.atan2(mouse_y - yCenter, mouse_x - xCenter)
+            arrow.style.transform = `translate(-50%, -50%) rotate(${angle}rad) rotate(180deg)`
+        })
+    }
 })
 
