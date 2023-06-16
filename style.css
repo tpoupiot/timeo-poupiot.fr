@@ -475,8 +475,8 @@
   gap: 1em;
 }
 .about-section article #sub-article1 > div p, .about-section article #sub-article2 > div p {
-  font-size: 1.2em;
-  line-height: 1.5em;
+  font-size: 1.5em;
+  line-height: 1.2em;
   text-align: justify;
 }
 .about-section article #sub-article1 > div p strong, .about-section article #sub-article2 > div p strong {
@@ -545,4 +545,4 @@
   margin-left: 1em;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styleComp.css.map */

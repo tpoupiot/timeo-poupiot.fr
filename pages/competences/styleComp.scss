@@ -1,0 +1,128 @@
+@import '../../style_global/root';
+
+main {
+    @include section-style;
+    @include main-responsive;
+    height: 100%;
+    margin-bottom: 5em;
+    padding: 0 15em;
+
+    .section-title {
+        margin: 2em 0 4em 0;
+        span {
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    article {
+        margin-bottom: 20em;
+    }
+
+    article:last-child {
+        margin-bottom: 10em;
+    }
+
+    .title-article {
+        h1{
+            font-size: var(--title-size-rakkas);
+            font-family: Rakkas, serif;
+            font-weight: normal;
+            line-height: 80%;
+            strong {
+                font-weight: normal;
+                line-height: 80%;
+                font-family: Gnomon, sans-serif;
+                font-size: var(--title-size-gnomon);
+            }
+        }
+        h2 {
+            font-size: 2vw;
+            font-family: Gnomon;
+            font-weight: normal;
+            strong {
+                font-weight: normal;
+                color: var(--color-extra);
+            }
+        }
+    }
+    .separator {
+        margin: 2em 0;
+        width: 70%;
+        height: 1px;
+        background-color: var(--color-font);
+    }
+    p {
+        font-size: 1.2em;
+        margin-bottom: 3em;
+    }
+    .step {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        margin-bottom: 4em;
+        div {
+            h1 {
+                font-size: 2.5em;
+            }
+            ul {
+                margin-left: 2em;
+                li {
+                    font-size: 1.2em;
+                }
+            }
+        }
+        a {
+            display: flex;
+            align-items: center;
+            font-size: small;
+            letter-spacing: 0.1em;
+            padding: 1em 1.8em;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 300ms;
+            font-weight: bold;
+            img {
+                display: flex;
+                filter: invert(100%);
+                width: 20px;
+                height: 20px;
+                margin-left: 1em;
+            }
+            &:hover {
+                background: var(--color-font);
+                color: var(--color-background);
+                img {
+                    filter: invert(0%);
+                }
+            }
+        }
+    }
+    .img-presentation {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        gap: 1em;
+
+        a {
+            display: flex;
+            overflow: hidden;
+            background: #383838;
+            img {
+                display: block;
+                aspect-ratio: 1;
+                object-position: top;
+                transition: all 300ms;
+            }
+        }
+        a:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+

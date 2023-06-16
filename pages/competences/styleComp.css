@@ -68,6 +68,7 @@ main .title-article h1 {
 }
 main .title-article h1 strong {
   font-weight: normal;
+  line-height: 80%;
   font-family: Gnomon, sans-serif;
   font-size: var(--title-size-gnomon);
 }
@@ -143,8 +144,7 @@ main .img-presentation a {
 }
 main .img-presentation a img {
   display: block;
-  width: 100%;
-  object-fit: cover;
+  aspect-ratio: 1;
   object-position: top;
   transition: all 300ms;
 }
