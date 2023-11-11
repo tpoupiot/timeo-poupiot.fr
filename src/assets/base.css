@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/* Radix-ui color palette */
+:root {
+	--white-5: rgba(255, 255, 255, 0.95);
+	--white-4: rgba(255, 255, 255, 0.8);
+	--white-3: rgba(255, 255, 255, 0.6);
+	--white-2: rgba(255, 255, 255, 0.4);
+	--white-1: rgba(255, 255, 255, 0.2);
+
+	--black-6: #000000;
+	--black-5: #0d0d0d;
+	--black-4: rgba(0, 0, 0, 0.8);
+	--black-3: rgba(0, 0, 0, 0.6);
+	--black-2: rgba(0, 0, 0, 0.4);
+	--black-1: rgba(0, 0, 0, 0.2);
+
+	--red-12: #FFD1D9;
+	--red-11: #FF9592;
+	--red-10: #EC5D5E;
+	--red-9: #E5484D;
+	--red-8: #B54548;
+	--red-7: #8C333A;
+	--red-6: #72232D;
+	--red-5: #611623;
+	--red-4: #500F1C;
+	--red-3: #3B1219;
+	--red-2: #201314;
+	--red-1: #191111;
+
+	--ruby-3: #3A141E;
+}
+
+/* semantic color variables & fonts for this project */
+:root {
+	color-scheme: dark;
+	/* colors */
+	--color-primary-btn-bg: var(--red-10);
+	--color-primary-btn-bg-hover: var(--red-11);
+	--color-primary-btn-bg-active: var(--red-12);
+
+	--color-primary-btn-bd: var(--red-10);
+	--color-primary-btn-bd-hover: var(--red-11);
+	--color-primary-btn-bd-active: var(--red-12);
+
+	--color-primary-btn-shadow: var(--red-7);
+	--color-primary-btn-txt: var(--black-5);
+
+
+	--color-secondary-btn-bg: none;
+	--color-secondary-btn-bg-hover: none;
+
+	--color-secondary-btn-bd: var(--white-1);
+	--color-secondary-btn-bd-hover: var(--white-4	);
+
+	--color-secondary-btn-txt: var(--white-3);
+	--color-secondary-btn-txt-hover: var(--white-5);
+
+
+	/* fonts */
+	--font-heading: 'Poppins', Inter, sans-serif;
+	--font-body: 'Space Grotesk', Inter, sans-serif;
+	--default-font-size: 16px;
+}
+
+*,	
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 101vh;
+	color: var(--white-5);
+	background-color: var(--white-5);
+	transition:
+		color 0.5s,
+		background-color 0.5s;
+	font-family: var(--font-body);
+	font-size: var(--default-font-size);
+
+}
+
+section {
+	background-color: var(--black-5);
+}

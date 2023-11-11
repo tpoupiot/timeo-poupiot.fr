@@ -1,0 +1,95 @@
+<script setup>
+    import Button from '@/components/buttons/Button.vue';
+    import InfoButton from "@/components/buttons/InfoButton.vue";
+    import IconArrowDown from "@/components/icons/IconArrowDown.vue";
+</script>
+
+<template>
+    <section class="hero-section">
+        <main>
+            <InfoButton label="Travaille chez NetCURD" link="https://netcurd.fr/"/>
+            <div>
+                <h1>
+                    Timéo Poupiot
+                </h1>
+                <p>
+                    Étudiant en informatique et <strong>Développeur Web</strong> junior.
+                </p>
+                <div class="contacts-buttons">
+                    <Button :isPrimary=true :isTiny=true label="Github" socials="github" />
+                    <Button :isPrimary=true :isTiny=true label="LinkedIn" socials="linkedin" />
+                </div>
+            </div>
+        </main>
+
+        <div class="cta-container">
+            <a href="#about-section" class="cta">
+                <IconArrowDown/>
+            </a>
+        </div>
+    </section>
+</template>
+
+<style scoped>
+    section {
+        background: linear-gradient(0deg, var(--black-5) 25%, var(--ruby-3) 150%);
+        height: 100vh;
+    }
+
+	main {
+		max-width: 920px;
+		margin: 0 auto;
+		padding: 10rem 0 0;
+	}
+	h1 {
+		font-size: 4rem;
+		color: #fff;
+		font-family: 'Poppins',serif;
+		font-weight: 700;
+		letter-spacing: -0.03em;
+		line-height: 1.1;
+	}
+	p {
+		font-size: 1.5rem;
+		color: rgba(255, 255, 255, 0.7);
+		font-family: 'Poppins',serif;
+		margin-top: 1em;
+	}
+	strong {
+		color: #EC5D5E;
+	}
+	.contacts-buttons {
+		margin-top: 2em;
+		display: flex;
+	}
+	.contacts-buttons > * {
+		margin-right: 10px;
+	}
+    .cta-container {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 4rem;
+    }
+	.cta {
+		display: grid;
+		place-items: center;
+        width: 40px;
+		height: 40px;
+        color: rgba(255, 255, 255, 0.8);
+		animation: move-down 1s infinite;
+	}
+	.cta svg {
+		width: 20px;
+		height: 20px;
+	}
+	.cta:hover {
+		color: rgba(255, 255, 255, 1);
+	}
+	@keyframes move-down {
+		0% { transform: translateY(0); }
+		50% { transform: translateY(5px); }
+		100% { transform: translateY(0); }
+	}
+</style>
