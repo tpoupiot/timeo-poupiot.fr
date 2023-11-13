@@ -7,7 +7,7 @@
 <template>
     <section class="hero-section">
         <main>
-            <InfoButton label="Travaille chez NetCURD" link="https://netcurd.fr/"/>
+            <InfoButton label="Travaille chez NetCURD" link="https://netcurd.fr"/>
             <div>
                 <h1>
                     Timéo Poupiot
@@ -16,8 +16,8 @@
                     Étudiant en informatique et <strong>Développeur Web</strong> junior.
                 </p>
                 <div class="contacts-buttons">
-                    <Button :isPrimary=true :isTiny=true label="Github" socials="github" />
-                    <Button :isPrimary=true :isTiny=true label="LinkedIn" socials="linkedin" />
+                    <Button label="Github" size="small" icon="github" link="https://github.com" />
+                    <Button label="LinkedIn" size="small" icon="linkedin" link="https://linkedin.com" />
                 </div>
             </div>
         </main>
@@ -32,7 +32,6 @@
 
 <style scoped>
     section {
-        background: linear-gradient(0deg, var(--black-5) 25%, var(--ruby-3) 150%);
         height: 100vh;
     }
 
@@ -44,20 +43,18 @@
 	h1 {
 		font-size: 4rem;
 		color: #fff;
-		font-family: 'Poppins',serif;
-		font-weight: 700;
+		font-family: var(--font-heading);
+		font-weight: 600;
 		letter-spacing: -0.03em;
 		line-height: 1.1;
 	}
 	p {
-		font-size: 1.5rem;
-		color: rgba(255, 255, 255, 0.7);
-		font-family: 'Poppins',serif;
+		font-size: 1.4rem;
+        color: var(--color-paragraph);
+		font-family: var(--font-body);
 		margin-top: 1em;
 	}
-	strong {
-		color: #EC5D5E;
-	}
+
 	.contacts-buttons {
 		margin-top: 2em;
 		display: flex;
@@ -77,7 +74,7 @@
 		place-items: center;
         width: 40px;
 		height: 40px;
-        color: rgba(255, 255, 255, 0.8);
+        color: var(--white-4);
 		animation: move-down 1s infinite;
 	}
 	.cta svg {
@@ -85,7 +82,7 @@
 		height: 20px;
 	}
 	.cta:hover {
-		color: rgba(255, 255, 255, 1);
+		color: var(--white-5)
 	}
 	@keyframes move-down {
 		0% { transform: translateY(0); }

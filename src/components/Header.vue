@@ -16,13 +16,13 @@
 				<MenuLinks label="Contact" link="/contact" />
 			</nav>
 		</div>
-		<Button label="Curriculum" link="../assets/pdf/cv_poupiot.pdf" download/>
+		<Button label="Curriculum" secondary link="../assets/pdf/cv_poupiot.pdf" download/>
 	</header>
 </template>
 
 <style scoped>
 	header {
-		padding: 1.25rem 6rem;
+        padding: 1.25rem 6rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -39,9 +39,5 @@
     .logo {
         width: 35px;
         margin-right: 1rem;
-    }
-    .logo > img {
-        max-width: 100%;
-        display: block;
     }
 </style>

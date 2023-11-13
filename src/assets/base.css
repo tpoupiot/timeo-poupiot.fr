@@ -6,6 +6,7 @@
 	--white-5: rgba(255, 255, 255, 0.95);
 	--white-4: rgba(255, 255, 255, 0.8);
 	--white-3: rgba(255, 255, 255, 0.6);
+	--white-2-5: rgba(255, 255, 255, 0.5);
 	--white-2: rgba(255, 255, 255, 0.4);
 	--white-1: rgba(255, 255, 255, 0.2);
 
@@ -58,9 +59,17 @@
 	--color-secondary-btn-txt-hover: var(--white-5);
 
 
+	--color-paragraph: var(--white-2-5);
+	--color-strong-paragraph: var(--red-10);
+	--color-heading: var(--white-5);
+	--color-heading-2: var(--white-4);
+
+
+
 	/* fonts */
 	--font-heading: 'Poppins', Inter, sans-serif;
-	--font-body: 'Space Grotesk', Inter, sans-serif;
+	--font-button: 'Space Grotesk', Inter, sans-serif;
+	--font-body: 'Poppins', Inter, sans-serif;
 	--default-font-size: 16px;
 }
 
@@ -70,20 +79,4 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-body {
-	min-height: 101vh;
-	color: var(--white-5);
-	background-color: var(--white-5);
-	transition:
-		color 0.5s,
-		background-color 0.5s;
-	font-family: var(--font-body);
-	font-size: var(--default-font-size);
-
-}
-
-section {
-	background-color: var(--black-5);
 }
